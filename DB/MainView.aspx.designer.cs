@@ -67,13 +67,13 @@ namespace DB {
         protected global::System.Web.UI.WebControls.Label Name_Label;
         
         /// <summary>
-        /// Label_Text コントロール。
+        /// Name_Text コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Label_Text;
+        protected global::System.Web.UI.WebControls.TextBox Name_Text;
         
         /// <summary>
         /// Point_Label コントロール。
@@ -103,6 +103,60 @@ namespace DB {
         protected global::System.Web.UI.WebControls.Button Add_Button;
         
         /// <summary>
+        /// UP_ID コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UP_ID;
+        
+        /// <summary>
+        /// UP_ID_Label コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UP_ID_Label;
+        
+        /// <summary>
+        /// UP_Name コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UP_Name;
+        
+        /// <summary>
+        /// UP_Name_Text コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UP_Name_Text;
+        
+        /// <summary>
+        /// UP_Point コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UP_Point;
+        
+        /// <summary>
+        /// UP_Point_Text コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UP_Point_Text;
+        
+        /// <summary>
         /// Update_Button コントロール。
         /// </summary>
         /// <remarks>
@@ -110,6 +164,24 @@ namespace DB {
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Update_Button;
+        
+        /// <summary>
+        /// Del_ID コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Del_ID;
+        
+        /// <summary>
+        /// DEL_ID_Label コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label DEL_ID_Label;
         
         /// <summary>
         /// Delete_Button コントロール。
