@@ -12,7 +12,7 @@
     <div>
     
     </div>
-            <asp:GridView ID="DB_Grid" runat="server" Height="192px" Width="396px" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" OnSelectedIndexChanged="DB_Grid_SelectedIndexChanged">
+            <asp:GridView ID="DB_Grid" runat="server" Height="192px" Width="396px" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" OnSelectedIndexChanged="DB_Grid_SelectedIndexChanged" OnRowDataBound="DB_Grid_RowDataBound">
                 <Columns>
                     <asp:CommandField ButtonType="Button" HeaderText="選択" ShowSelectButton="True" />
                 </Columns>
@@ -27,37 +27,37 @@
                 <SortedDescendingHeaderStyle BackColor="#002876" />
             </asp:GridView>
         <asp:Panel ID="Button_Panel" CssClass="Panel" runat="server" Height="431px" Width="394px">
-            <asp:Label ID="ID_Label"  runat="server"></asp:Label>
-            <asp:TextBox ID="ID_Text" runat="server"></asp:TextBox>
+            <asp:Label ID="Add_Number"  runat="server"></asp:Label>
+            <asp:TextBox ID="Add_Number_Text" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="Name_Label" runat="server"></asp:Label>
-            <asp:TextBox ID="Name_Text" CssClass="Text" runat="server"></asp:TextBox>
+            <asp:Label ID="Add_Name" runat="server"></asp:Label>
+            <asp:TextBox ID="Add_Name_Text" CssClass="Text" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="Point_Label" runat="server"></asp:Label>
-            <asp:TextBox ID="Point_Text" CssClass="Text" runat="server"></asp:TextBox>
+            <asp:Label ID="Add_Point" runat="server"></asp:Label>
+            <asp:TextBox ID="Add_Point_Text" CssClass="Text" runat="server"></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="Add_Button" runat="server" Height="40px" Text="追加" Width="105px" OnClick="Add_Button_Click" />
             <br />
             <br />
-            <asp:Label ID="UP_ID" runat="server"></asp:Label>
-            <asp:Label ID="UP_ID_Label" runat="server"></asp:Label>
+            <asp:Label ID="UP_Number" runat="server"></asp:Label>
+            <asp:TextBox ID="UP_Number_Text" runat="server" Enabled="False" ></asp:TextBox>
             <br />
             <asp:Label ID="UP_Name" runat="server"></asp:Label>
-            <asp:TextBox ID="UP_Name_Text" runat="server" CssClass="Text"></asp:TextBox>
+            <asp:TextBox ID="UP_Name_Text" runat="server" CssClass="Text" Enabled="False"></asp:TextBox>
             <br />
             <asp:Label ID="UP_Point" runat="server"></asp:Label>
-            <asp:TextBox ID="UP_Point_Text" runat="server" CssClass="Text"></asp:TextBox>
+            <asp:TextBox ID="UP_Point_Text" runat="server" CssClass="Text" Enabled="False"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="Update_Button" runat="server"　Height="40px" Text="更新" Width="105px"　 OnClick="Update_Button_Click"/>
+            <asp:Button ID="Update_Button" runat="server"　Height="40px" Text="更新" Width="105px"　 OnClick="Update_Button_Click" Enabled="False"/>
             <br />
             <br />
-            <asp:Label ID="Del_ID" runat="server"></asp:Label>
-            <asp:Label ID="DEL_ID_Label" runat="server"></asp:Label>
+            <asp:Label ID="Del_Number" runat="server"></asp:Label>
+            <asp:Label ID="Del_Number_Label" runat="server"></asp:Label>
             <br />
             <br />
-            <asp:Button ID="Delete_Button" runat="server"　Height="40px" Text="削除"　Width="105px" OnClick="Delete_Button_Click" />
+            <asp:Button ID="Delete_Button" runat="server"　Height="40px" Text="削除"　Width="105px" OnClick="Delete_Button_Click" Enabled="False" />
         </asp:Panel>
     </form>
 </body>

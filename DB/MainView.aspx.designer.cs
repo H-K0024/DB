@@ -40,58 +40,58 @@ namespace DB {
         protected global::System.Web.UI.WebControls.Panel Button_Panel;
         
         /// <summary>
-        /// ID_Label コントロール。
+        /// Add_Number コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ID_Label;
+        protected global::System.Web.UI.WebControls.Label Add_Number;
         
         /// <summary>
-        /// ID_Text コントロール。
+        /// Add_Number_Text コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ID_Text;
+        protected global::System.Web.UI.WebControls.TextBox Add_Number_Text;
         
         /// <summary>
-        /// Name_Label コントロール。
+        /// Add_Name コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Name_Label;
+        protected global::System.Web.UI.WebControls.Label Add_Name;
         
         /// <summary>
-        /// Name_Text コントロール。
+        /// Add_Name_Text コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Name_Text;
+        protected global::System.Web.UI.WebControls.TextBox Add_Name_Text;
         
         /// <summary>
-        /// Point_Label コントロール。
+        /// Add_Point コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Point_Label;
+        protected global::System.Web.UI.WebControls.Label Add_Point;
         
         /// <summary>
-        /// Point_Text コントロール。
+        /// Add_Point_Text コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Point_Text;
+        protected global::System.Web.UI.WebControls.TextBox Add_Point_Text;
         
         /// <summary>
         /// Add_Button コントロール。
@@ -103,22 +103,22 @@ namespace DB {
         protected global::System.Web.UI.WebControls.Button Add_Button;
         
         /// <summary>
-        /// UP_ID コントロール。
+        /// UP_Number コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label UP_ID;
+        protected global::System.Web.UI.WebControls.Label UP_Number;
         
         /// <summary>
-        /// UP_ID_Label コントロール。
+        /// UP_Number_Text コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label UP_ID_Label;
+        protected global::System.Web.UI.WebControls.TextBox UP_Number_Text;
         
         /// <summary>
         /// UP_Name コントロール。
@@ -166,22 +166,22 @@ namespace DB {
         protected global::System.Web.UI.WebControls.Button Update_Button;
         
         /// <summary>
-        /// Del_ID コントロール。
+        /// Del_Number コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Del_ID;
+        protected global::System.Web.UI.WebControls.Label Del_Number;
         
         /// <summary>
-        /// DEL_ID_Label コントロール。
+        /// Del_Number_Label コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label DEL_ID_Label;
+        protected global::System.Web.UI.WebControls.Label Del_Number_Label;
         
         /// <summary>
         /// Delete_Button コントロール。
