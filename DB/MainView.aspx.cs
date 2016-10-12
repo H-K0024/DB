@@ -14,12 +14,10 @@ namespace DB
 
         //表示項目で使う定数
         #region
-        const String STUDENT_ID = "出席番号：";
-        const String STUDENT_NAME = "名前：";
-        const String STUDENT_POINT = "点数：";
-        const String STUDENT_RESULT = "合否：";
-        const String URL = "http://localhost:64087/MainView.aspx";
-        const String CONNECT = @"Data Source=(local);Initial Catalog=ReportDB;Integrated Security=SSPI";
+        const String STUDENT_ID = "出席番号";
+        const String STUDENT_NAME = "名前";
+        const String STUDENT_POINT = "点数";
+        const String STUDENT_RESULT = "合否";
         #endregion
 
         //変数
@@ -35,20 +33,11 @@ namespace DB
 
         //テーブル
         Hashtable select_hash = new Hashtable();
-
-        //SQL
-        SqlConnection con = new SqlConnection();
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*
-            if(IsPostBack)
-            {
-                return;
-            }
-            */
-            //ラベル表示
+            //表示ラベル
             #region
             //追加
             Add_Number.Text = STUDENT_ID;
@@ -62,6 +51,7 @@ namespace DB
 
             //削除
             Del_Number.Text = STUDENT_ID;
+
             #endregion
 
             //SQL読み込み
@@ -72,42 +62,57 @@ namespace DB
             DB_Grid.DataSource = dr;
             DB_Grid.DataBind();
             con.Close();
+
+            //ヘッダー文字
+            DB_Grid.HeaderRow.Cells[2].Text = STUDENT_ID;
+            DB_Grid.HeaderRow.Cells[3].Text = STUDENT_NAME;
+            DB_Grid.HeaderRow.Cells[4].Text = STUDENT_POINT;
+            DB_Grid.HeaderRow.Cells[5].Text = STUDENT_RESULT;
+
         }
 
         //追加ボタンクリック
         protected void Add_Button_Click(object sender, EventArgs e)
         {
-            //追加する情報
-            number = Add_Number_Text.Text;
-            name = Add_Name_Text.Text;
-            point = int.Parse(Add_Point_Text.Text);
-
-            //成績判定
-            if(point >= 60)
+            try
             {
-                result = true;
+                //追加する情報
+                number = Add_Number_Text.Text;
+                name = Add_Name_Text.Text;
+                point = int.Parse(Add_Point_Text.Text);
+
+                //成績判定
+                if (point >= 60)
+                {
+                    result = true;
+                }
+                else
+                {
+                    result = false;
+                }
+
+                //データベースを開く
+                SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=ReportDB;Integrated Security=SSPI");
+                con.Open();
+
+                //SQL分作成
+                SqlCommand cmd = new SqlCommand("INSERT INTO Reportmst(NUMBER,NAME,POINT,RESULT) VALUES(@NUMBER,@NAME,@POINT,@RESULT)", con);
+                cmd.Parameters.Add(new SqlParameter("@NUMBER", number));
+                cmd.Parameters.Add(new SqlParameter("@NAME", name));
+                cmd.Parameters.Add(new SqlParameter("@POINT", point));
+                cmd.Parameters.Add(new SqlParameter("@RESULT", result));
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                con.Close();
+
+                Response.Redirect(Request.Url.OriginalString);
             }
-            else
+            catch
             {
-                result = false;
+                return;
             }
-
-            //データベースを開く
-            SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=ReportDB;Integrated Security=SSPI");
-            con.Open();
-
-            //SQL分作成
-            SqlCommand cmd = new SqlCommand("INSERT INTO Reportmst(NUMBER,NAME,POINT,RESULT) VALUES(@NUMBER,@NAME,@POINT,@RESULT)", con);
-            cmd.Parameters.Add(new SqlParameter("@NUMBER", number));
-            cmd.Parameters.Add(new SqlParameter("@NAME", name));
-            cmd.Parameters.Add(new SqlParameter("@POINT", point));
-            cmd.Parameters.Add(new SqlParameter("@RESULT", result));
-
-            SqlDataReader dr = cmd.ExecuteReader();
-
-            con.Close();
-
-            Response.Redirect(URL);
+            
         }
 
         //削除ボタンクリック
@@ -132,7 +137,7 @@ namespace DB
 
             con.Close();
 
-            Response.Redirect(URL);
+            Response.Redirect(Request.Url.OriginalString);
         }
 
         //選択ボタンクリック
@@ -195,7 +200,7 @@ namespace DB
                 }
                 else
                 {
-                    point = 0;
+                    point = int.Parse(DB_Grid.SelectedRow.Cells[4].Text);
                 }
                 #endregion
 
@@ -226,7 +231,7 @@ namespace DB
                 DB_Grid.DataBind();
                 con.Close();
 
-                Response.Redirect(URL);
+                Response.Redirect(Request.Url.OriginalString);
             }
             catch
             {

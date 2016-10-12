@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="MainView.css"/>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" autocomplete="off">
     <div>
     
     </div>
@@ -28,7 +28,7 @@
             </asp:GridView>
         <asp:Panel ID="Button_Panel" CssClass="Panel" runat="server" Height="431px" Width="394px">
             <asp:Label ID="Add_Number"  runat="server"></asp:Label>
-            <asp:TextBox ID="Add_Number_Text" runat="server"></asp:TextBox>
+            <asp:TextBox ID="Add_Number_Text" runat="server" ></asp:TextBox>
             <br />
             <asp:Label ID="Add_Name" runat="server"></asp:Label>
             <asp:TextBox ID="Add_Name_Text" CssClass="Text" runat="server"></asp:TextBox>
