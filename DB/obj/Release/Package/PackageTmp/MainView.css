@@ -1,0 +1,14 @@
+﻿#Button_Panel{
+    position:absolute;
+    top:0px;
+    left:68%;
+}
+
+.Panel{
+    border-color:black;
+    border-style:solid;
+}
+
+.Text{
+    margin-left:32px;
+}
