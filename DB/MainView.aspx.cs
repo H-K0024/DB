@@ -51,7 +51,6 @@ namespace DB
 
             //削除
             Del_Number.Text = STUDENT_ID;
-
             #endregion
 
             //SQL読み込み
